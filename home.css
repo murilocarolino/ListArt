@@ -1,0 +1,102 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #A6ADEE;
+}
+
+header {
+    display: inline-flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0% 3%;
+    border-bottom: 2px solid black;
+}
+
+main {
+    display: flex;
+    gap: 30%;
+}
+
+.img {
+    height: 60px;
+}
+
+h1 {
+    font-family: 'Inter', sans-serif;
+    color: white;
+}
+
+.logo {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+.usuarioLogo {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+.cardTarefa {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 25px;
+    margin-left: 50px;
+    width: 25%;
+}
+
+.pendente {
+    width: 230px;
+    height: 230px;
+    background-color: #3E447B;
+    border-radius: 10px;
+}
+
+.adicionar {
+    width: 230px;
+    height: 230px;
+    background-color: #3E447B;
+    opacity: 50%;
+    border-radius: 10px;
+}
+
+.andamento {
+    width: 230px;
+    height: 230px;
+    background-color: #3E447B;
+    border-radius: 10px;
+}
+
+.concluido {
+    width: 230px;
+    height: 230px;
+    background-color: #3E447B;
+    border-radius: 10px;
+}
+
+h2 {
+    font-size: 15px;
+    margin-left: 25px;
+    font-family: 'Inter', sans-serif;
+    color: white;
+}
+
+.calendario {
+    width: 730px;
+    height: 730px;
+    background-color: #3E447B;
+    border-radius: 10px;
+    margin-top: 25px;
+}
+
+.padding{
+    padding-left: 20vw;
+}
