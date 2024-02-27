@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
 *{
     padding: 0;
     margin: 0;
@@ -58,14 +60,22 @@ h1 {
     height: 230px;
     background-color: #3E447B;
     border-radius: 10px;
+    position: relative; 
+    z-index: 1;
+    color: white;
 }
 
-.adicionar {
+.adicionar {     
     width: 230px;
     height: 230px;
     background-color: #3E447B;
     opacity: 50%;
     border-radius: 10px;
+    z-index: 0;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%; 
+    left: 50%;
 }
 
 .andamento {
@@ -89,14 +99,133 @@ h2 {
     color: white;
 }
 
-.calendario {
+.padding{
+    padding-left: 20vw;
+}
+
+.detalhe {
+    position: relative; 
     width: 730px;
     height: 730px;
     background-color: #3E447B;
     border-radius: 10px;
     margin-top: 25px;
+    z-index: 1; 
 }
 
-.padding{
-    padding-left: 20vw;
+p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: xx-large;
+    font-weight: bold;
+    font-family: 'Inter', sans-serif;
+    color: white;
+}
+
+ul {
+    display: flex;
+    flex-direction: column-reverse;
+    margin-bottom: 20px;
+}
+
+.header button {
+    position: absolute;
+    right: 18%;
+    margin-top: -30px;
+}
+
+.header i {
+    font-size: 25px;
+}
+
+.tarefas {
+    margin-top: 40px;
+    width: 85%;
+    margin-left: 7%;
+}
+
+.textoInserir {
+     border-radius: 20px;
+     border: none;
+     padding: 10px;
+     outline: none;
+     width: 90%;
+}
+
+.divInserir {
+    border-radius: 20px;
+    display: flex;
+    padding: 10px;
+    box-shadow: 4px 4px 10px 0px;
+}
+
+button  {
+    background: transparent ;
+    width: 10%;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.divLi {
+    margin-top: 20px;
+    padding: 10px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 6px 5px 10px 0px black;
+    display: flex;
+    align-items: center;
+}
+  
+.divLi span {
+    width: 80%;
+    color: dimgrey;
+}
+  
+.divLi input {
+    width: 10%;
+    outline: none;
+    background-color: currentcolor;
+}
+  
+.divLi i {
+    font-size: 22px;
+    color: brown;
+}
+  
+li {
+    list-style-type: none;
+}
+  
+.line-through {
+    text-decoration: line-through;
+}
+
+
+.bxs-trash {
+    margin-left: 125%;
+}
+
+.cardTarefa button{
+    z-index: -1;
+
+
+}
+
+.concluido{
+    color:white;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.tarefa-texto{
+    margin: 15px;
+    background-color: #A6ADEE;
+    border-radius: 20px;
+    font-size: 18px;
+    height: 25px;
+    padding-left: 16px;
+    font-style:oblique;
 }

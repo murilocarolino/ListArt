@@ -10,6 +10,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@700&display=swap" rel="stylesheet">
     <script src="mais.js" defer></script>
+    <script src="app.js" defer></script>
     <link rel="stylesheet" href="home.css">
     <title>ListArt</title>
 </head>
@@ -32,27 +33,117 @@
 
         
         <div class="cardTarefa">
-
             <div id="pendente" class="pendente">
                 <h2> Pendentes </h2>
-                <a href="/tarefas.html">
-                <button id="adicionar" class="adicionar" >
-                </button>
-            </a>
+                <button id="adicionar" class="adicionar"></button>
             </div>
-
+        
             <div class="andamento">
                 <h2> Em andamento </h2>
             </div>
-
-            <div class="concluido">
-                <h2> Concluido </h2>
+        
+            <div class="concluido" id="concluido">
+                <h2> Concluído </h2>
             </div>
-            
         </div>
+        
+        
+
 
         <div class="calendario">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Domingo</th>
+                        <th>Segunda</th>
+                        <th>Terça</th>
+                        <th>Quarta</th>
+                        <th>Quinta</th>
+                        <th>Sexta</th>
+                        <th>Sábado</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="day"></td>
+                        <td class="day"></td>
+                        <td class="day"></td>
+                        <td class="day"></td>
+                        <td class="day">1</td>
+                        <td class="day">2</td>
+                        <td class="day">3</td>
+                    </tr>
+                    <tr>
+                        <td class="day">4</td>
+                        <td class="day">5</td>
+                        <td class="day">6</td>
+                        <td class="day">7</td>
+                        <td class="day">8</td>
+                        <td class="day">9</td>
+                        <td class="day">10</td>
+                    </tr>
+                    <tr>
+                        <td class="day">11</td>
+                        <td class="day">12</td>
+                        <td class="day">13</td>
+                        <td class="day">14</td>
+                        <td class="day">15</td>
+                        <td class="day">16</td>
+                        <td class="day">17</td>
+                    </tr>
+                    <tr>
+                        <td class="day">18</td>
+                        <td class="day">19</td>
+                        <td class="day">20</td>
+                        <td class="day">21</td>
+                        <td class="day">22</td>
+                        <td class="day">23</td>
+                        <td class="day">24</td>
+                    </tr>
+                    <tr>
+                        <td class="day">25</td>
+                        <td class="day">26</td>
+                        <td class="day">27</td>
+                        <td class="day">28</td>
+                        <td class="day">29</td>
+                        <td class="day"></td>
+                        <td class="day"></td>
+                    </tr>
+                </tbody>
+            </table>
 
+            <div id="eventoModal" style="display: none; position: absolute; top: 19%; left: 45%; border-radius: 5px;
+                     transform: translate(-50%, -50%); background-color: #3E447B; padding: 20px;">
+                <h3>Adicionar Evento</h3>
+                <input type="text" id="eventoInput" placeholder="Digite o evento">
+                <button onclick="adicionarEvento()" style="background-color: white; border: transparent;">Adicionar</button>
+            </div>
+            
+            
+            <script>
+                function adicionarEvento() {
+                    var evento = document.getElementById("eventoInput").value;
+                    var cell = document.querySelector(".selected")
+                    if (cell) {
+                        cell.innerHTML += "<br>" + evento
+                        document.getElementById("eventoInput").value = ""
+                        document.getElementById("eventoModal").style.display = "none"
+                    }
+                }
+            
+                var cells = document.querySelectorAll(".day")
+                cells.forEach(function(cell) {
+                    cell.addEventListener("click", function() {
+                        var selectedCell = document.querySelector(".selected")
+                        if (selectedCell) {
+                            selectedCell.classList.remove("selected")
+                        }
+                        this.classList.add("selected")
+                        document.getElementById("eventoModal").style.display = "block"
+                    })
+                })
+            </script>
+        
         </div>
     </main>
 </body>
