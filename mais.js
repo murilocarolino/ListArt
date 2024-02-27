@@ -7,6 +7,6 @@ quadrado.addEventListener('mouseover', function(){
     adicionar.classList.add('padding')
 
     document.getElementById("adicionar").addEventListener("click", function() {
-        window.location.href = "/tarefas.html";
+        window.location.href = "./tarefas.html";
     });
 })
